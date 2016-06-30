@@ -1,0 +1,103 @@
+<html>
+<head>
+  <title>Verify Student</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico" />  
+<style>
+  .cover{
+    position:fixed;
+    display:table;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(6, 113, 253, 0.08);
+    z-index:100;    
+  } 
+  .spinnerCell{
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+  }
+  .spinnerCore{
+    min-width: 6em;
+    border: 0.2em solid rgba(0, 0, 0, 0.25);
+    left: 45%;
+    position: absolute;
+    border-radius: .5em;
+    background-color: white;
+    padding: 1em;
+  }
+.hidden{display:none;}
+</style>
+</head>
+<body>
+<div id='loader' class='hidden'>
+  <div class='spinnerCell'>
+    <div class='spinnerCore'>
+      <img src='image/spiffygif_30x30.gif'style='width:2em,height:2emm'/>
+      <div id='spinnerText'>Loading....</div>   
+    </div>
+  </div>  
+</div>
+
+<div id='container' class='container'>
+	<div class='header'> 
+	<div><span> Verify Students of Jowai polytechnic </span></div> 
+	</div> 
+	<div id='entry' class='article'> 
+		<div class='table border'> 
+			<div class='tableCell border'> 
+				<div class='border bold'>Please enter the Roll Number:</div> 
+				<div class='border'>
+					<label for='roll'>Roll : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input id='roll'> ( eg. Jow/AA )<p>
+					<label for='number'>Number : </label> <input id='number' onkeyup='return validateNumber(this,event)'> 
+				</div> 
+				<div id='errorMessage' class='red'></div>
+				<div class='border'> <input type='button' value='Verify ' onclick='return callVerify()'/> </div> 
+			</div>
+		</div> 
+	</div> 
+
+
+	<div id='result' class='article'> 
+		<div class='table border'> 
+			<div class='tableCell border'> 
+				<div class='border bold'>Result:</div> 
+				<div id='resultText' class='border'>
+				</div> 
+				<div class='border'> <input type='button' value='Verify another student ' onclick='return verifyNext()'/> </div> 
+			</div>
+		</div> 
+	</div> 
+	<div class='footer'> <div><a href='http://www.jowaipolytechnic.in' target='_blank'>Jowai Polytechnic</div> </div>
+
+</div>
+
+
+
+<div id='dialog' class='hidden'>
+    <div class='container'style='width:70%'>
+      <div class='header'><div><span style='text-align:left'>Message:</span></div></div>
+      <div id='portalMessageBody'class='article' style='min-height:4em'>This is the Message.</div>
+      <div class='footer'>
+  		  <div><a href='http://www.jowaipolytechnic.in' target='_blank'>Jowai Polytechnic</div>
+    	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script src="script/script.js"></script>
+
+<script>
+function win_onkeydown_handler() {
+  var charCode = event.which || event.keyCode;
+  var charStr = String.fromCharCode(charCode);
+  if (charStr == "&") {
+      alert('Ampersand (&) character is not allowed.');
+      return false;
+  }
+}
+
+  //xhr('init',{'para':''});
+</script>
+</body>
+</html>

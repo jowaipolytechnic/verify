@@ -1,0 +1,260 @@
+body{
+    font-family:Arial,Helvetica,sans-serif;
+	margin:0;background:#FEFCFB;
+	color:#000;
+}
+  .cover{
+    position:fixed;
+    display:table;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(6, 113, 253, 0.08);
+    z-index:100;    
+  } 
+.hidden{display:none}
+.container{
+    background: bisque;
+	padding: 0.5em;
+	border-radius: 2em;
+	position: absolute;
+	margin: 1%;
+}
+.header{
+	background-color: burlywood;
+	padding-top:2.5em;
+ 	border-top-left-radius: 1.5em;
+  	border-top-right-radius: 1.5em;
+	margin:0em;
+}
+.header div{
+	display:table;
+	background-color: olivedrab;
+	width:100%;
+	padding: 0em;
+}
+.header span{
+	display:table-cell;
+  	text-align: center;
+	color:#FFF;
+	font-weight:bolder;
+	font-size:2em;
+	padding: 0.5em
+}
+
+.header ul{
+    margin-bottom: -0.09em;
+}
+.header li{
+	display: inline;
+	border: 0.1em solid #FFF;
+	border-bottom: none;
+	padding-top:0.5em;
+	padding-left:1em;
+	padding-right:1em;
+	border-top-right-radius:0.5em;
+	border-top-left-radius:0.5em;
+}
+.menuTab{
+	background-color:burlywood;
+	color:#111;
+}
+.menuActiveTab, .menuTab:hover{
+	background-color:olivedrab;
+	color:#FFF;
+}
+.menuTab:hover{
+	cursor:pointer;
+}
+.footer{
+	background-color: burlywood;
+	width:100%;
+ 	border-bottom-left-radius: 1.5em;
+  	border-bottom-right-radius: 1.5em;
+	margin:0em;
+	display:table;
+}
+.footer div{
+	display:table-cell;
+  	text-align: center;
+	color:#111;
+	font-size:1em;
+	font-style: italic;
+	padding: 0.5em
+}
+.footer a{color:#FFF;}
+.article{
+	margin-top:0.25em;
+	margin-bottom: 0.25em;
+	border: .1em solid black;
+	background-color: #FFF;
+	padding: 0.5em;
+}
+.article .heading{
+	font-weight: bolder;
+	font-size: 1.5em;
+}
+.table{display:table;width:99%;background-color: beige;}
+.tableCell{display:block; vertical-align:top;}
+.border{border: mediumaquamarine thin solid;margin:0.1em;padding:0.25em}
+.bold{font-weight: bolder}
+.red{color:red;}
+input[type='button']{
+	background-color: burlywood;
+ 	border-radius: 1.5em;
+	color: #111;
+  	padding-left: 1.5em;
+  	padding-right: 1.5em;
+	font-size: 1.5em;
+	border: .1em solid #111;
+}
+input[type='button']:hover{
+	background-color: olivedrab;
+	color: #fff;
+	cursor:pointer;
+}
+table{
+    border:thin solid mediumaquamarine;
+    background-color: beige;
+    position:relative;
+    text-align: center;
+    width: 100%;
+}
+table tr{
+    border:thin solid mediumaquamarine;
+}
+table td
+{
+    border: mediumaquamarine thin solid;
+    overflow:visible;
+}
+table input
+{
+    width: 95%;
+    min-width:2em;
+}
+table textarea
+{
+    position: relative;
+    top: 0;
+}
+.mandatory{
+    background-color:olivedrab;
+    color:white;
+    border: .1em solid #111;
+    border-radius:1.5em;
+    padding-left: 1em;
+  	padding-right: 1em;
+      margin-right:0.5em;
+}
+/*----------------loadBar------------*/
+#jpLoadBarV1.visible {
+  z-index:100;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  width: 60%;height:40%;
+  background-color:rgb(223, 186, 131);    
+  border: #ffe4b5 ridge;
+}
+.hidden{
+  display:none;
+}
+#jpLoadBarTextV1{
+  text-align:center;
+  font-size:xx-large;
+  font-size:50px;
+  line-height:200px;
+}
+
+.MessageBox{
+	display:block;
+	position:absolute;
+	left:30%;
+	width:40%;
+	top:20%;
+	background-color:#DCE5C6;
+	border: #DCE5C6 ridge;
+	overflow:hidden;
+}
+
+
+.MessageTitle{
+	position:static;
+	height:60px;
+	color:#FFF;
+	background-color:#559F37;
+	font-size:30px;
+	font-style:normal;
+	font-weight:bold;
+	padding-top:15px;
+	padding-left:15px;
+}
+
+
+.MessageBody{
+	position:static;
+	min-height:75px;
+	color:#000;
+	font-size:18px;
+	padding-top:20px;
+	padding-left:20px;
+}
+
+
+.MessageFooter{
+	height:50px;
+	padding-right:5px;
+}
+
+
+.MessageFooter input{
+	height:40px;
+	width:100px;
+	color:#FFF;
+	font-size:18px;
+	font-weight:bold;
+	float:right;
+	background-color:#427A2F;
+    margin-left:1em;
+}
+
+
+.MessageFooter input:hover{
+	color:#000;
+	background-color:#A9CF8B;
+}
+/*------------------*/
+@media screen and (min-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+	.container{
+    	margin-left:5%;
+		margin-right:5%;
+        width:90%;
+		margin-top: 0.5em;
+	}  
+}
+@media screen and (min-width:480px) { /* smartphones, Android phones, landscape iPhone */
+ }
+@media screen and (min-width:600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+@media screen and (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+	.container{
+    	margin-left:10%;
+		margin-right:10%;
+        width:80%;
+		margin-top: 1em;
+	}
+	
+	.tableCell{display:table-cell}
+}
+@media screen and (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+	.container{
+    	margin-left:15%;
+		margin-right:15%;
+        width:70%;
+		margin-top: 2em;
+	}
+}
+@media screen and (min-width:1281px) { /* hi-res laptops and desktops */ 
+}
