@@ -26,11 +26,13 @@ xmlhttp.send();
 function doProcess(data){
   var returnPayload=JSON.parse(data);
   closeLoadBar();
+  getE('entry').setAttribute('class','hidden');
+  getE('result').setAttribute('class','article');
   if(returnPayload.exist==true){
-    var html='<b>Name: </b>'+returnPayload.name +'<p><b>Roll No.: </b>Jow/'+returnPayload.roll+' '+returnPayload.number+'<p><b>Registration Number: </b>'+returnPayload.registrationNumber+'<p><b>Passing Month &amp; Year: </b>'+returnPayload.passingMonth +' '+returnPayload.passingYear;
-    getE('resultText').innerHTML=html;    
+    var html='<b>Name: </b>'+returnPayload.name +'<p><b>Roll No.: </b>'+returnPayload.roll+' '+returnPayload.number+'<p><b>Registration Number: </b>'+returnPayload.registrationNumber+'<p><b>Branch: </b>'+returnPayload.branch+'<p><b>Passing Month &amp; Year: </b>'+returnPayload.passingMonth +' '+returnPayload.passingYear;
+    getE('resultText').innerHTML=html; 	   
   }else{
-    var html='<h3>Sorry:</h3><p>The student with Roll Number <b>Jow/'+roll+' '+number+'</b> is not on record.<p>This may be due to one or more of the following reason:<p>1. The entered Roll Number is wrong.<p>2. The student data have not been updated.<p>3. The student have not pass out.<p><p><i>Please contact the Polytechnic directly to ascertain the same</i>';
+    var html='<h3>Sorry:</h3><p>The student with Roll Number <b>'+roll+' '+number+'</b> is not on record.<p>This may be due to one or more of the following reason:<p>1. The entered Roll Number is wrong.<p>2. The student data have not been updated.<p>3. The student have not pass out.<p><p><i>Please contact the Polytechnic directly to ascertain the same</i>';
     getE('resultText').innerHTML=html;    
   }
 }
@@ -57,6 +59,7 @@ function verifyNext(){
   getE('number').value='';
   getE('result').setAttribute('class','hidden');
   getE('entry').setAttribute('class','article');
+  getE('errorMessage').innerHTML='';      
 }
 
 //---------------------UTIL------------------------------------

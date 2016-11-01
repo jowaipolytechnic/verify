@@ -59,7 +59,7 @@
 	</div> 
 
 
-	<div id='result' class='article'> 
+	<div id='result' class='hidden'> 
 		<div class='table border'> 
 			<div class='tableCell border'> 
 				<div class='border bold'>Result:</div> 
@@ -87,17 +87,5 @@
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <script src="script/script.js"></script>
 
-<script>
-function win_onkeydown_handler() {
-  var charCode = event.which || event.keyCode;
-  var charStr = String.fromCharCode(charCode);
-  if (charStr == "&") {
-      alert('Ampersand (&) character is not allowed.');
-      return false;
-  }
-}
-
-  //xhr('init',{'para':''});
-</script>
 </body>
 </html>
