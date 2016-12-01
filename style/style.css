@@ -56,6 +56,11 @@ body{
 	border-top-right-radius:0.5em;
 	border-top-left-radius:0.5em;
 }
+.header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .menuTab{
 	background-color:burlywood;
 	color:#111;
